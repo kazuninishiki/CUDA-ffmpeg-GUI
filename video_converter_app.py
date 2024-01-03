@@ -41,12 +41,12 @@ class VideoConverterApp:
 
         # CUDA Output Checkbox
         self.cuda_output_var = tk.IntVar(value=1)
-        self.cuda_output_checkbox = tk.Checkbutton(master, text="cuda output", variable=self.cuda_output_var)
+        self.cuda_output_checkbox = tk.Checkbutton(master, text="CUDA NVDEC", variable=self.cuda_output_var)
         self.cuda_output_checkbox.grid(row=2, column=1, pady=10, sticky=tk.W)
 
         # CUDA Hardware Acceleration Checkbox
         self.cuda_hw_accel_var = tk.IntVar(value=1)  # Checked by default
-        self.cuda_hw_accel_checkbox = tk.Checkbutton(master, text="CUVID Accel", variable=self.cuda_hw_accel_var)
+        self.cuda_hw_accel_checkbox = tk.Checkbutton(master, text="CUDA NVENC", variable=self.cuda_hw_accel_var)
         self.cuda_hw_accel_checkbox.grid(row=2, column=3, pady=10, sticky=tk.W)
 
         # h264 or h265 output Checkbox
