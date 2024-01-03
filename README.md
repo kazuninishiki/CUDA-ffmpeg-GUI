@@ -16,14 +16,23 @@ motion interpolation : _interpolates frames to 60fps, similar to SVP's SVPEncode
 
 ** -vf "minterpolate=fps=60:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1" **
 
+
+
+
 CUDA output : _Full hardware transcode with NVENC Encoding_
 
 **-hwaccel_output_format cuda** 
 
-cuvid Accel : _Full hardware transcode with NVDEC decoding_
+
+
+
+CUVID Accel : _Full hardware transcode with NVDEC decoding_
 
 **-hwaccel cuda**
 
-h264/h265  : _uses CUDA for accelerated h264 or h265 encoding.  Must be combined with "CUDA output" Checked._
+
+
+
+CUDA h264/h265  : _uses CUDA for accelerated h264 or h265 encoding.  Must be combined with "CUDA output" Checked._
 
 **-c:v hevc_nvenc or h264_nvenc** 
