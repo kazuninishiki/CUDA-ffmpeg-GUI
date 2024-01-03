@@ -18,7 +18,7 @@ motion interpolation : _interpolates frames to 60fps, similar to SVP's SVPEncode
 <br><br><br>
 
 
-CUDA output : _Full hardware transcode with NVENC Encoding_
+CUDA NVENC : _Full hardware transcode with NVENC Encoding_
 <br>
 **-hwaccel_output_format cuda** 
 <br><br><br>
@@ -26,7 +26,7 @@ CUDA output : _Full hardware transcode with NVENC Encoding_
 
 
 
-CUVID Accel : _Full hardware transcode with NVDEC decoding_
+CUDA NVDEC : _Full hardware transcode with NVDEC decoding_
 <br>
 **-hwaccel cuda**
 <br><br><br>
