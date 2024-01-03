@@ -18,7 +18,7 @@ motion interpolation : _interpolates frames to 60fps, similar to SVP's SVPEncode
 <br><br><br>
 
 
-CUDA output : _Full hardware transcode with NVENC Encoding_
+CUDA NVENC: _Full hardware transcode with NVENC Encoding_
 <br>
 **-hwaccel_output_format cuda** 
 <br><br><br>
@@ -26,7 +26,7 @@ CUDA output : _Full hardware transcode with NVENC Encoding_
 
 
 
-CUVID Accel : _Full hardware transcode with NVDEC decoding_
+CUDA NVDEC : _Full hardware transcode with NVDEC decoding_
 <br>
 **-hwaccel cuda**
 <br><br><br>
@@ -37,3 +37,6 @@ CUDA h264/h265  : _uses CUDA for accelerated h264 or h265 encoding.  Must be com
 <br>
 **-c:v hevc_nvenc or h264_nvenc** 
 <br><br><br>
+
+
+Note that if video source has any type of corruption (i.e. partially broken mp4 file) NVENC and NVDEC may throw you an error. 
