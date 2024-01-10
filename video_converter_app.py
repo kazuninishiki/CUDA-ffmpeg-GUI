@@ -56,6 +56,17 @@ def stop_ffmpeg():
     global ffmpeg_process
     if ffmpeg_process is not None:
         ffmpeg_process.terminate()
+def save_ffmpeg_cmd():
+    with open("ffmpeg_cmd.txt", "w") as file:
+        file.write(cmd_display.get("1.0", tk.END))
+
+def load_ffmpeg_cmd():
+    if os.path.exists("ffmpeg_cmd.txt"):
+        with open("ffmpeg_cmd.txt", "r") as file:
+            cmd_display.delete("1.0", tk.END)
+            cmd_display.insert(tk.END, file.read())
+    else:
+        messagebox.showinfo("Info", "No saved command found.")
 
 window = tk.Tk()
 window.title("FFmpeg GUI")
@@ -96,5 +107,8 @@ cmd_display = scrolledtext.ScrolledText(window, width=132, height=3, font=('Cons
 cmd_display.grid(row=7, column=0, columnspan=3, padx=10, pady=10)
 
 tk.Button(window, text="STOP", command=stop_ffmpeg).grid(row=8, column=1, padx=10, pady=10)
+
+tk.Button(window, text="Save Command", command=save_ffmpeg_cmd).grid(row=9, column=0, padx=10, pady=10)
+tk.Button(window, text="Load Command", command=load_ffmpeg_cmd).grid(row=9, column=2, padx=10, pady=10)
 
 window.mainloop()
